@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DeckApplication</string>
+    <string name="create_norration">Create norration</string>
+    <string name="textview">TextView</string>
+    <string name="done">Done</string>
+    <string name="norration">Norration</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_norration">NorrationActivity</string>
+    <string name="tab_text_1">Game</string>
+    <string name="tab_text_2">Deck</string>
+</resources>

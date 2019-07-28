@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/morph_edit_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <EditText
+        android:id="@+id/morph_edit_text_text"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morph_edit_text_name"
+        tools:text="Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text" />
+
+    <EditText
+        android:id="@+id/morph_edit_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:gravity="start|center_vertical"
+        android:inputType="textPersonName"
+        android:text="Card name"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/morph_edit_text_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@android:string/search_go"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/morph_edit_button_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morph_edit_switch_skip_show" />
+
+    <Button
+        android:id="@+id/morph_edit_button_edit"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/morph_edit_text_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/morph_edit_text_search" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/morph_edit_list_pool"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morph_edit_button_edit" />
+
+    <TextView
+        android:id="@+id/morph_edit_text_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Morph"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/morph_edit_text_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/morph_edit_text_name" />
+
+    <Switch
+        android:id="@+id/morph_edit_switch_skip_show"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Show skip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morph_edit_text_text" />
+
+    <EditText
+        android:id="@+id/morph_edit_text_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/morph_edit_text_duration_pre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/morph_edit_text_duration_pre" />
+
+    <TextView
+        android:id="@+id/morph_edit_text_duration_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Duration:"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/morph_edit_switch_skip_show"
+        app:layout_constraintEnd_toStartOf="@+id/morph_edit_text_duration"
+        app:layout_constraintTop_toTopOf="@+id/morph_edit_switch_skip_show" />
+
+</android.support.constraint.ConstraintLayout>

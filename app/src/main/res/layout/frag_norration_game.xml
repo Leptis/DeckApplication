@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="100"
+    android:background="#DA81E6"
+    tools:context=".activities.NorrationActivity2"
+    tools:visibility="visible">
+
+    <Spinner
+        android:id="@+id/game_spinner_round_count"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/game_text_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/game_text_round" />
+
+    <EditText
+        android:id="@+id/game_text_search_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/game_button_add_card"
+        app:layout_constraintEnd_toStartOf="@+id/game_button_add_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_spinner_turn_count" />
+
+    <Spinner
+        android:id="@+id/game_spinner_turn_count"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/game_text_turn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/game_text_turn" />
+
+    <TextView
+        android:id="@+id/game_text_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Turn:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_text_round" />
+
+    <Button
+        android:id="@+id/game_button_add_card"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="+"
+        android:translationZ="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_spinner_turn_count" />
+
+    <TextView
+        android:id="@+id/game_text_round_of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="of"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/game_text_round"
+        app:layout_constraintEnd_toStartOf="@+id/game_spinner_round_count"
+        app:layout_constraintTop_toTopOf="@+id/game_text_round" />
+
+    <EditText
+        android:id="@+id/game_text_norration"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/game_button_save"
+        app:layout_constraintEnd_toStartOf="@+id/game_button_save"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Spinner
+        android:id="@+id/game_spinner_turn"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/game_text_turn"
+        app:layout_constraintEnd_toStartOf="@+id/game_text_turn_of"
+        app:layout_constraintTop_toTopOf="@+id/game_text_turn" />
+
+    <Spinner
+        android:id="@+id/game_spinner_round"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/game_text_round"
+        app:layout_constraintEnd_toStartOf="@+id/game_text_round_of"
+        app:layout_constraintTop_toTopOf="@+id/game_text_round" />
+
+    <Button
+        android:id="@+id/game_button_save"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="0dp"
+        android:text="S"
+        android:translationZ="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/game_text_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="Round:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_text_norration" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/game_recycler_view_cards"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_text_search_card"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/game_text_turn_of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="of"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/game_text_turn"
+        app:layout_constraintEnd_toStartOf="@+id/game_spinner_turn_count"
+        app:layout_constraintTop_toTopOf="@+id/game_text_turn" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/card_item_text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Card name"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/card_item_seek_prob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/card_item_seek_prob"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:max="10000"
+        android:progress="0"
+        android:scrollbarSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_item_text_prob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_item_text_name" />
+
+    <Button
+        android:id="@+id/card_item_button_view"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="S"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_item_button_remove"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/card_item_text_prob"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:focusable="auto"
+        android:gravity="center|start|center_horizontal"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_item_seek_prob"
+        app:layout_constraintEnd_toStartOf="@+id/card_item_button_view"
+        app:layout_constraintTop_toTopOf="@+id/card_item_seek_prob" />
+
+    <Switch
+        android:id="@+id/card_item_switch_fix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:scrollbarSize="10dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_item_text_name"
+        app:layout_constraintEnd_toStartOf="@+id/card_item_button_view"
+        app:layout_constraintStart_toStartOf="@+id/card_item_text_prob"
+        app:layout_constraintTop_toTopOf="@+id/card_item_text_name" />
+
+    <Button
+        android:id="@+id/card_item_button_remove"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="X"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

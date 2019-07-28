@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_checl_root"
+    android:layout_width="300dp"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/card_check_text_name_pref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Name:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/card_check_text_type_pref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Type:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/card_check_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/card_check_text_name_pref"
+        app:layout_constraintStart_toEndOf="@+id/card_check_text_name_pref"
+        app:layout_constraintTop_toTopOf="@+id/card_check_text_name_pref" />
+
+    <TextView
+        android:id="@+id/card_check_text_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/card_check_text_type_pref"
+        app:layout_constraintStart_toStartOf="@+id/card_check_text_name"
+        app:layout_constraintTop_toTopOf="@+id/card_check_text_type_pref" />
+
+    <Switch
+        android:id="@+id/card_check_switch_in_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_check_text_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_check_text_name" />
+</android.support.constraint.ConstraintLayout>
